@@ -8,6 +8,21 @@ $(document).on('ready turbolinks:load', function(){
 
     $('#calendar').fullCalendar({
         events: '/events.json',
+        header: {
+            center: 'addEventButton'
+          },
+          customButtons: {
+            addEventButton: {
+              text: 'Agregar evento...',
+              click: function() {
+                $.ajax({
+                  url: '/events/new',
+                  type: 'GET',
+                  dataType: 'script'
+                })
+              }
+            }
+          },
         firstDay: 4,
         eventDrop: function(event, delta, revertFunc) {
             if (event.start.format() < moment().format()){
