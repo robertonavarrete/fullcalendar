@@ -33,7 +33,7 @@ $(document).on('ready turbolinks:load', function(){
                 $.ajax({
                     url: '/events/'+ event.id,
                     type: 'patch',
-                    dataType: 'JSON',
+                    dataType: 'script',
                     data: {event: {start: event.start.format() }}
                 })
             }
