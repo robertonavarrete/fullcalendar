@@ -19,4 +19,5 @@
 //= require fullcalendar/dist/locale/es
 //= require popper.js/dist/umd/popper
 //= require bootstrap/dist/js/bootstrap
+//= require bootrap4-datetimepicker/build/js/bootstrap-datetimepicker.min
 //= require_tree .
